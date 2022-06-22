@@ -1,3 +1,20 @@
-<h1>Welcome to SvelteKit</h1>
-<p>Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation</p>
-<h1>Hello this is me!</h1>
+<script context="module">
+      export async function load( {fetch} )
+      {
+        const res = await fetch('https://api.themoviedb.org/3/movie/popular?api_key=00f18f62f1339acd38f45ceabf0531b5&language=en-US&page=1');
+        const data = await res.json();
+        console.log(data);
+
+        if (res.ok)
+        {
+            return {
+                props: { popular: data.results }
+            };
+        }
+      }
+
+</script>
+
+<script>
+
+</script>
