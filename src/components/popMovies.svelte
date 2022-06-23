@@ -1,6 +1,6 @@
 <script>
 
-    import MovieCard from "./movieCard.svelte";
+    import MovieCard from "./movieCards.svelte";
     export /**
 * @type {any}
 */
@@ -25,8 +25,9 @@
     .popularMovies
     {
         display:grid;
-        grid-template-columns: repeat(autoFit, minmax(250px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
         grid-column-gap:1rem;
         grid-row-gap:2rem;
     }
+
 </style>
