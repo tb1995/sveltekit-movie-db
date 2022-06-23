@@ -7,7 +7,9 @@ export /**
 
 
 <div class="movieCard">
+    <a href={'/movies/' + movies.id}>
     <img src="{ 'https://image.tmdb.org/t/p/w500' + movies.poster_path}" alt="{movies.title}" />
+    </a>
 
     
     <div class="description">
